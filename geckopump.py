@@ -4,8 +4,6 @@ import RPi.GPIO as GPIO
 
 mode = GPIO.getmode() 
 
-GPIO.cleanup()
-
 Pump = 26
 
 GPIO.setmode(GPIO.BCM)
@@ -13,9 +11,9 @@ GPIO.setup(Pump, GPIO.OUT)
 
 def pump(x): 
   GPIO.output(Pump, GPIO.HIGH)
-  print("Pumping: " + x)
+  print("Pumping: " + str(x))
   time.sleep(x)
   GPIO.output(Pump, GPIO.LOW)
 
-pump(10)
+pump(5)
 GPIO.cleanup()
