@@ -15,5 +15,5 @@ def pump(x):
   time.sleep(x)
   GPIO.output(Pump, GPIO.LOW)
 
-pump(5)
+pump(10)
 GPIO.cleanup()
